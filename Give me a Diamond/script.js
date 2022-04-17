@@ -38,6 +38,7 @@ function diamond(n) {
       firstArr.unshift(i);
     }
   }
+  
   const lastSet = firstArr.map(
     (el, i) => `${" ".repeat(i)}${"*".repeat(el)}\n`
   );
