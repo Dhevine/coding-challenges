@@ -20,3 +20,23 @@ function digital_root(n) {
           .reduce((a, b) => a + b, 0)
       );
 }
+
+
+// or using while loop because recursion is sometimes slower
+
+function digital_Root(n) {
+  let newValue = String(n);
+
+  while (newValue.length > 1) {
+    const data = newValue
+      .split("")
+      .map((el) => +el)
+      .reduce((a, b) => a + b, 0);
+
+    newValue = String(data);
+  }
+
+  return +newValue;
+}
+
+digital_Root(942); // 6
